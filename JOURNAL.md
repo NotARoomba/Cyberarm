@@ -6,10 +6,6 @@
   ==================================================================
 -->
 
-This is my journal of the design and building process of **Cyberarm**.  
-You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/549).
-
-
 ## 10/16/2025 - Planning  
 
 I want this arm to have a base that rotates on one axis, then a joint where it can rotate on 2 axis, then another joint where it can rotate on another 3 axis, and finally the toolhead where it has another 3 axis (maybe just one???). In total this adds up to a robot that has 9 degrees of freedom which is insane and also pretty cool considering that it isn't just limited to just one configuration.
@@ -42,4 +38,19 @@ Here is a sketch of what I have in mind:
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjUxMSwicHVyIjoiYmxvYl9pZCJ9fQ==--9bf4296151d96faf3125b2d1d7bdaf4f8ffee891/image.png)
 
 I saw somewhere that to fix the problem of spinning circuits, they made a PCB "ring" where the no matter the rotation, it will always be connected. Further research shows that these are called "pancake slip rings". THey will supply 5V, 3V3, and also an SPI/I2C channel to communicate with the tool hand. In the future I am also planning on having one section dedicated as a hardware ID so that it can automatically determine what module is connected (maybe through hardware bit flags???).  
+
+## 10/21/2025 - More Planning/Research  
+
+I have been researching a bit more and I have found a design that I like.
+
+![d45.jpg](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzgwMywicHVyIjoiYmxvYl9pZCJ9fQ==--11114a990e3eca5b63df3de840ec452fc67e406a/d45.jpg)
+
+Aside from that I was going down a rabbit hole of learning about stepper vs servo motors, their pros and cons, and how to control each of them. From my research stepper motors are better BUT, they dont have absolute positioning eg they only function off of angles relative to their last position but this can be remediated with something called a closed loop stepper motor. (https://www.omc-stepperonline.com/search/nema?category_id=407&sort=p.price&order=ASC). It basically allows the motor to know if its planned rotation wasn't going as planned and allows the software to detect it. 
+
+So then I plan on using stepper motors instead of servos and will have to modify the board accordingly. I also was planning on how big each servo motor would be and for the base I plan on using a NEMA 23 motor size for the base and attaching it directly (no gear system/pulley) then I plan on using another NEMA 23 (based off of the image although it might be a NEMA 17) for the first joint, a NEMA 17 (or 23) for the second joint (this time it does look like it uses a pulley system) and finally 3 other NEMA 14's. 
+
+I started working on a rounded base in Inventor (first time using it lol) and also started thinking about how the pancake slip rings would work. I plan on them being on the bottom of the first segment that connects on the base, and then protruding from the base I will have some pogo pins or smth like that that will be in contact with the slip ring. I just need to plan accordingly for how many rings in the circle I will need and make sure that the trace width supports the amperage (if that even is a problem lol, but I assume it is).
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDA2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bf663f6f308876beddd3fe9bc430a1bfc568cef7/image.png)
+  
 
