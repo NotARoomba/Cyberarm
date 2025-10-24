@@ -54,7 +54,7 @@ I started working on a rounded base in Inventor (first time using it lol) and al
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDA2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bf663f6f308876beddd3fe9bc430a1bfc568cef7/image.png)
   
 
-## 10/23/2025 - Design Base  
+## 10/23/2025 - Design Base-ish  
 
 So I'm designing the lid and am learning how to place screw holes in inventor, now comes the part that holds the rest of the arm so I am looking at "flanged shaft couplers" on JLCMC to see which one with which specs I can add. 
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDUyNiwicHVyIjoiYmxvYl9pZCJ9fQ==--419a38e0c6504ff68a65fc23a2f17f3d00321978/image.png)
