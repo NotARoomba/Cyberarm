@@ -54,3 +54,37 @@ I started working on a rounded base in Inventor (first time using it lol) and al
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDA2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--bf663f6f308876beddd3fe9bc430a1bfc568cef7/image.png)
   
 
+## 10/23/2025 - Design Base  
+
+So I'm designing the lid and am learning how to place screw holes in inventor, now comes the part that holds the rest of the arm so I am looking at "flanged shaft couplers" on JLCMC to see which one with which specs I can add. 
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDUyNiwicHVyIjoiYmxvYl9pZCJ9fQ==--419a38e0c6504ff68a65fc23a2f17f3d00321978/image.png)
+
+I found this but it appears theres a better one? (It also doesnt have the right diameters I need)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDUyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--a1f4e25e74f3ebdf0784dac86aeab7163572204a/image.png)
+
+Although this is fine, I plan on having this support alot of weight, so it needs to be durable and having the shaft as a through-hole, concerned me a bit, so I decided to research some more and found this.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDkyNCwicHVyIjoiYmxvYl9pZCJ9fQ==--522ca65f81dfefd4316abffcf757e6555197b70c/image.png)
+
+CXKG-1-D25-d6.35-e6.35
+
+The D25 for the total diameter eg 25 mm, d and e the inner diameter(s?) so those should be the size of the shaft of the stepper which is 1/4" (6.35mm RAAAAA METRIC).
+
+I then had the thought that I had made sure that the motor can spin horizontally but I wasn't taking into account the force that would be pushing down on it. 
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDk0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--2f36f14b72ba004d3f806c115df5f4cccf213d12/image.png)
+
+As I originally planned on the shaft coupler to be sitting directly on top of the motor, I soon found out that that force (axial load) can damage the stepper motor so then I would need whats called a "thrust bearing". Basically this bearing holds the weight of whatever's above the motor so that force gets transfered to the case and not the motor itself. (https://jlcmc.com/product/s/C15/BCTX/thrust-ball-bearing)
+
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDk0NCwicHVyIjoiYmxvYl9pZCJ9fQ==--63df1b74501134bf2b97b652d6e2e9e65beb62f6/image.png)
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDk0NSwicHVyIjoiYmxvYl9pZCJ9fQ==--01b5e62df6b67235a6d7ebe0356704531d0f5d30/image.png)
+Based on these 2 images I would need to have a thrust bearing thats bigger than 40mm and less than 47.8mm so I am going to use the 47mm just to account for the inner width of the ball bearing case.
+(BCTX-51205)
+
+Change of plans, after seeing how tall the bearing was, I didn't have enough space to access the shaft and also the shaft coupler was too big so I am going to use BCTX-51103.
+
+After adding it in I had this: 
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDk1NywicHVyIjoiYmxvYl9pZCJ9fQ==--30c7371bbefe10633d843c1d46d4cc553144fad6/image.png)
+
+But I don't like that the shaft coupler is so tall (and I'm probably using the wrong one). So now I'm gonna take a break and look for more *flanged* shaft coupler parts later :sob:
+  
+
